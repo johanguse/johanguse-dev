@@ -22,14 +22,6 @@ module.exports = {
       colors: {
         primary: colors.teal,
         gray: colors.trueGray,
-        code: {
-          green: '#b5f4a5',
-          yellow: '#ffe484',
-          purple: '#d9a9ff',
-          red: '#ff8383',
-          blue: '#93ddfd',
-          white: '#fff',
-        },
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -74,6 +66,14 @@ module.exports = {
             'code:after': {
               content: 'none',
             },
+            details: {
+              backgroundColor: theme('colors.gray.100'),
+              paddingLeft: '4px',
+              paddingRight: '4px',
+              paddingTop: '2px',
+              paddingBottom: '2px',
+              borderRadius: '0.25rem',
+            },
             hr: { borderColor: theme('colors.gray.200') },
             'ol li:before': {
               fontWeight: '600',
@@ -117,6 +117,9 @@ module.exports = {
               color: theme('colors.gray.100'),
             },
             code: {
+              backgroundColor: theme('colors.gray.800'),
+            },
+            details: {
               backgroundColor: theme('colors.gray.800'),
             },
             hr: { borderColor: theme('colors.gray.700') },
