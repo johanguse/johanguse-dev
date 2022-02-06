@@ -134,3 +134,6 @@
 .token.italic {
   font-style: italic;
 }
+.token.table {
+  display: inline;
+}
