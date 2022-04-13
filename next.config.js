@@ -7,6 +7,7 @@ const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app;
   style-src 'self' 'unsafe-inline' cdn.jsdelivr.net;
+  script-src-elem 'self' data:;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
