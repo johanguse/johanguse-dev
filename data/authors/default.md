@@ -1,12 +1,14 @@
 ---
 name: Johan Guse
-avatar: /static/images/avatar.png
+avatar: https://res.cloudinary.com/dvcywi3uf/image/upload/v1652237380/pics/me-4x4.jpg
 occupation: Front-end
-company: Conta Azul
+company: Warren Brasil
 email: johanguse@gmail.com
 twitter: https://twitter.com/johanguse
 linkedin: https://www.linkedin.com/in/johanguse
 github: https://github.com/johanguse
 ---
 
-Developing web solutions since 2006 and currently working as a Front-End Developer at Conta Azul in the Attraction and Acquisition team, being responsible for improving websites and blogs using WordPress and HubSpot, therefore our current focus is to improve the MRR by making several upgrades to the websites and blogs. Also, contributing to the Google Analytics to Google Analytics 360 migration project + integration with Salesforce on the websites, blogs, checkout and cart of the application in VueJS.
+Developing web solutions since 2006 and currently working as a Front-End Developer at Warren Brasil a fintech-focused on investments.
+
+Like to work with: HTML, CSS, JavaScript, React, NextJS, TypeScript, Jest, SASS, Styled Components, Bootstrap, Tailwind, VueJS, WordPress, Responsive Design, Storybook, WCAG, Design System Principles, UX/UI Concepts, Usability, Performance and Testability, Git, Storybook, Figma, Adobe XD, Photoshop, Swift, SwiftUI, NodeJS, PHP, MySQL, Postgres, API RESTful, GraphQL, plus I have familiarity with A/B testing, web security (OWASP, XSS, CSRF, security headers).

@@ -38,6 +38,10 @@ export default function Home({ posts }) {
                   description={d.description}
                   imgSrc={d.imgSrc}
                   href={d.href}
+                  clientName={d.clientName}
+                  clientURL={d.clientURL}
+                  date={d.date}
+                  skills={d.skills}
                 />
               ))}
             </div>
