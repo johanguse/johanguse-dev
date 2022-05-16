@@ -6,8 +6,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app;
-  style-src 'self' 'unsafe-inline' cdn.jsdelivr.net;
-  script-src-elem 'self' 'unsafe-inline' googletagmanager.com data:;
+  style-src 'self' 'unsafe-inline' cdn.jsdelivr.net https://www.googletagmanager.com;
+  script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com data:;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
