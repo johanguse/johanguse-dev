@@ -13,6 +13,17 @@ const projectsData = [
     skills: 'React Native, TypeScript, Storybook',
   },
   {
+    title: 'Shikilia',
+    description: `Shikilia provides emergency cash transfers to low-income Kenyan communities that have been the hardest hit by COVID-19. Measures to control the spread of COVID-19 inadvertently destroy informal labour markets and trap low-income communities into extreme poverty.`,
+    imgSrc:
+      'https://res.cloudinary.com/dvcywi3uf/image/upload/v1653746687/jrguse/port/shikilia.jpg',
+    href: 'https://shikilia.com/',
+    clientName: 'Joyjet Digital (fr)',
+    clientURL: 'https://www.joyjet.com/',
+    date: 'May 2021',
+    skills: 'WordPress, PHP, CSS, HTML, JavaScript',
+  },
+  {
     title: 'cRide',
     description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
