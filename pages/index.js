@@ -30,7 +30,7 @@ export default function Home({ posts }) {
             Check out my lastest works!
           </p>
           <div className="space-y-2 ">
-            <div className="-m-4 flex flex-wrap">
+            <div className="-m-4 mb-6 flex flex-wrap">
               {projectsData.slice(0, 6).map((d) => (
                 <Card
                   key={d.title}
@@ -44,6 +44,11 @@ export default function Home({ posts }) {
                   skills={d.skills}
                 />
               ))}
+            </div>
+            <div className="text-center text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+              <Link href={`/projects`} className="text-base font-bold leading-6">
+                Check out all projects
+              </Link>
             </div>
           </div>
         </div>
@@ -120,7 +125,7 @@ export default function Home({ posts }) {
         )}
       </div>
       {siteMetadata.newsletter.provider !== '' && (
-        <div className="mt-10 flex hidden items-center justify-center">
+        <div className="mt-10 flex items-center justify-center">
           <NewsletterForm />
         </div>
       )}

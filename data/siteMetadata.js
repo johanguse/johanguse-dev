@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Johan Guse',
   author: 'Johan Guse',
   headerTitle: 'Johan Guse',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'My personal portfolio website and blog. A developer from Brazil.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
@@ -25,7 +25,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: 'revue',
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
