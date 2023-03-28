@@ -28,6 +28,14 @@ class MyDocument extends Document {
             integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"
             crossOrigin="anonymous"
           />
+          <script
+            async
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="b216dafd-5a35-4b4d-93c6-5b5f046fc1b1"
+            data-blockingmode="auto"
+            type="text/javascript"
+          ></script>
         </Head>
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
           <Main />
