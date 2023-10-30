@@ -29,3 +29,32 @@ For Hanko to function, you must have an account and obtain the API URL:
 After obtaining the API URL, make sure to add it to your `.env` file. If you're deploying your site on Vercel, remember to include this in the Vercel dashboard as well.
 
 With the setup complete, you're all set to implement the authentication process. This includes constructing the login/register page, a private dashboard, and a user profile page. To assist you further, I've prepared a boilerplate project with NextJS 14, incorporating App Router, TypeScript, and TailwindCSS. You can explore and utilize this repository [here](https://github.com/johanguse/nextjs14-hanko-auth).
+
+When you explore my boilerplate, you'll spot an auth folder within the components directory. Let's break down the purpose of each item within:
+
+```
+/
+├── public/
+├── src/
+│   ├── app/
+├── components/
+│   ├── auth
+│   │   └── ButtonLogout.tsx
+│   │   └── ContentDashboard.tsx
+│   │   └── HankoAuth.tsx
+│   │   └── HankoProfile.tsx
+└── package.json
+```
+
+<ButtonLogout />: Simply put, this is the button that allows logged-in users to sign out of your
+app.
+
+<DashboardContent>: A versatile component for protecting your pages from unauthorized access. While this serves as a layer of security, the preferred method to shield pages is using middleware.
+
+<HankoAuth />: Drop this component wherever you need login or registration functionality. It's a
+comprehensive solution for both creating an account and signing into your app.
+
+<HankoProfile />: This is a profile editor component. Integrate it into any page where you want
+users to have options to tweak their profiles.
+
+Wrapping up, Hanko's pretty much a game-changer for web app auth. Simple, secure, and no fuss. If you're diving into NextJS or any modern web project, give it a whirl! Would love to hear how it goes for you. Keep coding, stay curious, and catch you in the next post! 🚀✌️
