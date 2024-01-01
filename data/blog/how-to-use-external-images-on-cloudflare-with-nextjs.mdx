@@ -9,6 +9,10 @@ images: ['/static/images/cloudflare-workers-pages.jpg']
 authors: ['default']
 ---
 
+![Cloudflare Workers & Pages](/static/images/cloudflare-workers-pages.jpg)
+
+---
+
 Today, I decided to deploy one of my testing applications in Next.js to Cloudflare Workers & Pages. The deployment process is similar to Vercel, where I used the dashboard with the option `Next.js (Static HTML Export)` and setup `output: 'export'` enabled in my `next.config`. Everything worked smoothly during deployment until I opened the final version. To my surprise, the external images, in this case, images from the https://pravatar.cc/, were not working as expected.
 
 After some research on the web, I couldn't find a quick answer as I expected. So, I decided to write this short tip to help other developers who might be struggling with the same problem.
@@ -77,8 +81,12 @@ import { imageLoader } from '@/lib/imageLoader'
 
 By following these steps, you can commit the modifications to your repository to trigger a new deployment on the Cloudflare dashboard.
 
-##### My after and before deployment code.
+#### My before and after
 
 Before: https://a18b9eba.shadcn-carousel-testimonials.pages.dev/
 
+![Cloudflare Workers & Pages](/static/images/cloudflare-workers-pages-code-1.jpg)
+
 After: https://shadcn-carousel-testimonials.pages.dev/
+
+![Cloudflare Workers & Pages](/static/images/cloudflare-workers-pages-code-2.jpg)
