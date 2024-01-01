@@ -2,7 +2,7 @@
 name: Johan Guse
 avatar: https://res.cloudinary.com/dvcywi3uf/image/upload/v1652237380/pics/me-4x4.jpg
 occupation: Software Engineer
-company: None (Open to Work)
+company: Open to Work
 email: johanguse@gmail.com
 twitter: https://twitter.com/johanguse
 linkedin: https://www.linkedin.com/in/johanguse
