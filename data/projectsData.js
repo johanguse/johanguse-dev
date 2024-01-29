@@ -1,5 +1,16 @@
 const projectsData = [
   {
+    title: 'Hanko Hackathon',
+    description: `Hanko is an open source project that allows you to create and share your own`,
+    imgSrc:
+      'https://res.cloudinary.com/dvcywi3uf/image/upload/v1706533764/jrguse/port/ai-magic.jpg',
+    href: 'https://github.com/johanguse/hanko_hackathon',
+    clientName: 'Hanko Hackathon',
+    clientURL: 'https://github.com/johanguse/hanko_hackathon',
+    date: 'November 2023',
+    skills: 'NextJS, TypeScript, Passkey, Multilingual, PostgresSQL, Supabase',
+  },
+  {
     title: 'JoinRider',
     description: `What is you could look up any information in the world? Webpages, images, videos
     and more. Google has many features to help you find exactly what you're looking
