@@ -35,7 +35,7 @@ const projectsData = [
     skills: 'WordPress, PHP, CSS, HTML, JavaScript',
   },
   {
-    title: 'cRide',
+    title: 'cRide Web admin',
     description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten handphones with this simple yet affordable solution.`,
@@ -44,7 +44,7 @@ const projectsData = [
     clientName: 'Joyjet Digital (fr)',
     clientURL: 'https://www.joyjet.com/',
     date: 'February 2021',
-    skills: 'React Native, TypeScript, Storybook',
+    skills: 'React, TypeScript, Storybook',
   },
   {
     title: 'AmbevTech (formerly known as HBSIS)',
