@@ -18,18 +18,17 @@ const [isGoogleLoading, setIsGoogleLoading] = useState<boolean>(false)
 <button
 onClick={() => setIsGithubLoading(true)}
 >
-  {
-  isGithubLoading ? (<p>Loading...</p>) :
-  (<p>Github</p>)
-  }
+  {isGithubLoading ? (<p>Loading...</p>)
+  :
+  (<p>Github</p>)}
 </button>
+
 <button
 onClick={() => setIsGoogleLoading(true)}
 >
-  {
-  isIsGoogleLoading ? (<p>Loading...</p>) :
-  (<p>Google</p>)
-  }
+  {isIsGoogleLoading ? (<p>Loading...</p>)
+  :
+  (<p>Google</p>)}
 </button>
 ```
 
@@ -113,19 +112,15 @@ function handle(provider: 'google' | 'github') {
 <button
 onClick={() => handle('github')}
 >
-  {
-  isLoading.github ? (<p>Loading...</p>) :
-  (<p>Github</p>)
-  }
+  {isLoading.github ? (<p>Loading...</p>) :
+  (<p>Github</p>)}
 </button>
 
 <button
 onClick={() => handle('google')}
 >
-  {
-  isLoading.google ? (<p>Loading...</p>) :
-  (<p>Google</p>)
-  }
+  {isLoading.google ? (<p>Loading...</p>) :
+  (<p>Google</p>)}
 </button>
 
 ```
