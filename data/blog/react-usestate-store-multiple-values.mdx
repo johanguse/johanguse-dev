@@ -32,7 +32,7 @@ onClick={() => setIsGoogleLoading(true)}
 </button>
 ```
 
-Is this weird? Setting up two states like this totally goes against the buddy system, you know, like the whole "Don't Repeat Yourself" [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) vibe. Instead, I'm thinking I'll just reuse the same setState and stick to one hook. Much cleaner, right?
+Is this weird? Setting up two states like this totally goes against "Don't Repeat Yourself" [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) vibe. Instead, I'm thinking I'll just reuse the same setState and stick to one hook. Much cleaner, right?
 
 ```js
 // Define the types for the loading states
@@ -52,11 +52,14 @@ function useLoading(initialState: LoadingState) {
   const [isLoading, setIsLoading] = useState<LoadingState>(initialState);
 
   // Generic function to handle the loading state for each provider
+  // The setTimeout is just for testing purposes.
   function handleLoading(provider: keyof LoadingState) {
+    // Enable the spinner
     setIsLoading({
       ...isLoading,
       [provider]: true,
     });
+    // Disable the spinner
     setTimeout(() => {
       setIsLoading({
         ...isLoading,
@@ -93,13 +96,16 @@ const initialLoadingValues = {
   google: false,
   github: false,
 }
+
 const [isLoading, setIsLoading] = useState(initialLoadingValues)
 
 function handle(provider: 'google' | 'github') {
+  // Enable the spinner
   setIsLoading({
     ...initialLoadingValues,
     [provider]: true,
   })
+  // Disable the spinner
   setTimeout(() => {
     setIsLoading({
       ...initialLoadingValues,
