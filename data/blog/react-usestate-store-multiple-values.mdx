@@ -59,7 +59,7 @@ function useLoading(initialState: LoadingState) {
       ...isLoading,
       [provider]: true,
     });
-    // Disable the spinner after 1 second
+    // Disable the spinner after 1 second (for testing purposes)
     setTimeout(() => {
       setIsLoading({
         ...isLoading,
@@ -89,7 +89,7 @@ export default function LoadingButtons() {
 };
 ```
 
-Or you could go even simpler and skip the custom Hook altogether:
+Or you could go even simpler and skip the custom Hook:
 
 ```js
 const initialLoadingValues = {
@@ -105,7 +105,7 @@ function handle(provider: 'google' | 'github') {
     ...initialLoadingValues,
     [provider]: true,
   })
-  // Disable the spinner after 1 second
+  // Disable the spinner after 1 second (for testing purposes)
   setTimeout(() => {
     setIsLoading({
       ...initialLoadingValues,
@@ -133,4 +133,4 @@ onClick={() => handle('google')}
 
 If you've made it this far, I bet you're eager to see the code in action, huh? Well, no worries! Here's the link to the functional version: [Check it out here](https://bit.ly/usestate-storing-multiple-values)
 
-So, there you have it! Navigating through this code jungle was a trip, but we made it. We learned how to streamline our code by ditching unnecessary repetition, sticking to the DRY principle, and finding the simplest solution possible. Remember, coding doesn't always have to be complicated. Sometimes, the most straightforward approach is the best one. Keep exploring, keep coding, and until next time, happy hacking!
+So, there you have it! Navigating through this code jungle was a trip, but we made it. We learned how to streamline our code by ditching unnecessary repetition, sticking to the DRY principle, and finding the simplest solution possible. Remember, coding doesn't always have to be complicated. Sometimes, the most straightforward approach is the best one. Keep exploring, keep coding, and until next time!
