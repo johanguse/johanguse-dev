@@ -26,7 +26,7 @@ onClick={() => setIsGithubLoading(true)}
 <button
 onClick={() => setIsGoogleLoading(true)}
 >
-  {isIsGoogleLoading ? (<p>Loading...</p>)
+  {isGoogleLoading ? (<p>Loading...</p>)
   :
   (<p>Google</p>)}
 </button>
@@ -61,10 +61,10 @@ function useLoading(initialState: LoadingState) {
     });
     // Disable the spinner after 1 second (for testing purposes)
     setTimeout(() => {
-      setIsLoading({
-        ...isLoading,
+      setIsLoading(prevState => ({
+        ...prevState,
         [provider]: false,
-      });
+      }));
     }, 1000);
   }
 
