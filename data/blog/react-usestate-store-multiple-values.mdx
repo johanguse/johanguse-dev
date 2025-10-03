@@ -9,32 +9,26 @@ images: ['/static/images/react-usestate-multiple-values.jpg']
 authors: ['default']
 ---
 
-Alright, check this out: today, I'm digging into some funky code just to get a button icon spinning when it's loading. Got two buttons on my page, and the last developer went all out and made two separate useState functions just to toss a loading spinner on each one. Talk about going overboard! But hey, let me walk you through the previous code version:
+Recently, I encountered a common React pattern that could definitely be improved. The codebase had two buttons with loading states, and the previous developer created separate `useState` hooks for each button's loading state. While this works, it violates the DRY (Don't Repeat Yourself) principle and creates unnecessary complexity.
 
-```js
-const [isGithubLoading, setisGithubLoading] = useState<boolean>(false)
+Let me show you the original approach and then demonstrate a cleaner solution:
+
+```jsx
+const [isGithubLoading, setIsGithubLoading] = useState<boolean>(false)
 const [isGoogleLoading, setIsGoogleLoading] = useState<boolean>(false)
 
-<button
-onClick={() => setIsGithubLoading(true)}
->
-  {isGithubLoading ? (<p>Loading...</p>)
-  :
-  (<p>Github</p>)}
+<button onClick={() => setIsGithubLoading(true)}>
+  {isGithubLoading ? <p>Loading...</p> : <p>Github</p>}
 </button>
 
-<button
-onClick={() => setIsGoogleLoading(true)}
->
-  {isGoogleLoading ? (<p>Loading...</p>)
-  :
-  (<p>Google</p>)}
+<button onClick={() => setIsGoogleLoading(true)}>
+  {isGoogleLoading ? <p>Loading...</p> : <p>Google</p>}
 </button>
 ```
 
-Is this weird? Setting up two states like this totally goes against "Don't Repeat Yourself" [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) vibe. Instead, I'm thinking I'll just reuse the same setState and stick to one hook. Much cleaner, right?
+This approach works, but it's not ideal. Having separate states for each button violates the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and creates unnecessary complexity. Instead, we can consolidate these into a single state object, making our code more maintainable and easier to scale.
 
-```js
+```jsx
 // Define the types for the loading states
 interface LoadingState {
   google: boolean;
@@ -52,14 +46,14 @@ function useLoading(initialState: LoadingState) {
   const [isLoading, setIsLoading] = useState<LoadingState>(initialState);
 
   // Generic function to handle the loading state for each provider
-  // The setTimeout is just for testing purposes.
   function handleLoading(provider: keyof LoadingState) {
     // Enable the spinner
-    setIsLoading({
-      ...isLoading,
+    setIsLoading(prevState => ({
+      ...prevState,
       [provider]: true,
-    });
-    // Disable the spinner after 1 second (for testing purposes)
+    }));
+    
+    // Simulate async operation (replace with your actual API call)
     setTimeout(() => {
       setIsLoading(prevState => ({
         ...prevState,
@@ -86,12 +80,12 @@ export default function LoadingButtons() {
       </button>
     </>
   );
-};
+}
 ```
 
-Or you could go even simpler and skip the custom Hook:
+For a simpler approach without a custom hook, you can directly manage the state in your component:
 
-```js
+```jsx
 const initialLoadingValues = {
   google: false,
   github: false,
@@ -99,38 +93,45 @@ const initialLoadingValues = {
 
 const [isLoading, setIsLoading] = useState(initialLoadingValues)
 
-function handle(provider: 'google' | 'github') {
+function handleLoading(provider: 'google' | 'github') {
   // Enable the spinner
-  setIsLoading({
-    ...initialLoadingValues,
+  setIsLoading(prevState => ({
+    ...prevState,
     [provider]: true,
-  })
-  // Disable the spinner after 1 second (for testing purposes)
+  }))
+  
+  // Simulate async operation (replace with your actual API call)
   setTimeout(() => {
-    setIsLoading({
-      ...initialLoadingValues,
+    setIsLoading(prevState => ({
+      ...prevState,
       [provider]: false,
-    })
+    }))
   }, 1000)
 }
 
-// Using the handle function
-<button
-onClick={() => handle('github')}
->
-  {isLoading.github ? (<p>Loading...</p>) :
-  (<p>Github</p>)}
+// Using the handleLoading function
+<button onClick={() => handleLoading('github')}>
+  {isLoading.github ? <p>Loading...</p> : <p>Github</p>}
 </button>
 
-<button
-onClick={() => handle('google')}
->
-  {isLoading.google ? (<p>Loading...</p>) :
-  (<p>Google</p>)}
+<button onClick={() => handleLoading('google')}>
+  {isLoading.google ? <p>Loading...</p> : <p>Google</p>}
 </button>
-
 ```
 
-If you've made it this far, I bet you're eager to see the code in action, huh? Well, no worries! Here's the link to the functional version: [Check it out here](https://bit.ly/usestate-storing-multiple-values)
+## Key Benefits
 
-So, there you have it! Navigating through this code jungle was a trip, but we made it. We learned how to streamline our code by ditching unnecessary repetition, sticking to the DRY principle, and finding the simplest solution possible. Remember, coding doesn't always have to be complicated. Sometimes, the most straightforward approach is the best one. Keep exploring, keep coding, and until next time!
+This approach offers several advantages:
+
+1. **Reduced code duplication**: Instead of multiple `useState` hooks, we use a single state object
+2. **Better scalability**: Adding new buttons or loading states is straightforward
+3. **Improved maintainability**: Changes to the loading logic only need to be made in one place
+4. **Type safety**: TypeScript interfaces ensure type safety and better IDE support
+
+## Live Example
+
+You can see this pattern in action: [Check out the working example](https://bit.ly/usestate-storing-multiple-values)
+
+## Conclusion
+
+By consolidating multiple related states into a single state object, we've created a more maintainable and scalable solution. This pattern is particularly useful when you have multiple similar states that can be grouped together. Remember, good code isn't just about functionality—it's about readability, maintainability, and following established patterns like the DRY principle.
