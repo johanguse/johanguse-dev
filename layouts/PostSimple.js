@@ -6,6 +6,7 @@ import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import BuyMeACoffee from '@/components/BuyMeACoffee'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title } = frontMatter
@@ -37,6 +38,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10">{children}</div>
+              <BuyMeACoffee />
             </div>
             <Comments frontMatter={frontMatter} />
             <footer>

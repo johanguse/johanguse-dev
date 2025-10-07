@@ -1,5 +1,44 @@
 const projectsData = [
   {
+    title: 'Bank Statement Converter',
+    description: `AI-powered service that transforms PDF bank statements into Excel, CSV, JSON, and QBO formats with 99%+ accuracy. Built with Next.js 15 and FastAPI backend.`,
+    imgSrc:
+      'https://res.cloudinary.com/dvcywi3uf/image/upload/v1759872241/jrguse/port/bankstatementconverterwithai.jpg',
+    href: '/projects/bank-statement-converter',
+    externalHref: 'https://bankstatementconverterwithai.com/?utm_source=johan-github-readme',
+    clientName: 'Personal Project',
+    clientURL: 'https://bankstatementconverterwithai.com/?utm_source=johan-github-readme',
+    date: 'July 2025 - Present',
+    skills:
+      'Next.js 15, React 19, TypeScript, FastAPI, Python, OCR, Cloudflare R2, PostgreSQL, Prisma, Stripe',
+  },
+  {
+    title: 'LLM Generator',
+    description: `Generate llms.txt files for websites to improve their visibility to large language models. Firecrawl integration with OpenAI enhancement for high-quality, LLM-optimized content.`,
+    imgSrc:
+      'https://res.cloudinary.com/dvcywi3uf/image/upload/v1759872241/jrguse/port/llmgenerator.jpg',
+    href: '/projects/llm-generator',
+    externalHref: 'https://llmgenerator.com/?utm_source=johan-github-readme',
+    clientName: 'Personal Project',
+    clientURL: 'https://llmgenerator.com/?utm_source=johan-github-readme',
+    date: 'June 2025 - Present',
+    skills:
+      'React 19, TypeScript, Vite, Hono, Cloudflare Workers, D1, Drizzle ORM, Firecrawl, OpenAI, Trigger.dev, Better Auth',
+  },
+  {
+    title: 'DataTalked',
+    description: `Business intelligence SaaS platform with AI-powered analytics. Features RAG-based chat system, automated Stripe sync, scheduled email reports, and real-time financial dashboards.`,
+    imgSrc:
+      'https://res.cloudinary.com/dvcywi3uf/image/upload/v1759871601/jrguse/port/datatalked.jpg',
+    href: '/projects/datatalked',
+    externalHref: 'https://datatalked.com/?utm_source=johan-github-readme',
+    clientName: 'Personal Project',
+    clientURL: 'https://datatalked.com/?utm_source=johan-github-readme',
+    date: 'September 2025 - Present',
+    skills:
+      'React 19, TypeScript, TanStack Router, Convex, Clerk, Stripe Webhooks, OpenAI, Anthropic, RAG, Resend, Recharts, ShadcnUI',
+  },
+  {
     title: 'Hanko Hackathon',
     description: `Hanko is an open source project that allows you to create and share your own`,
     imgSrc:
