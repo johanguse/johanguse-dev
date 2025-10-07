@@ -214,7 +214,7 @@ export default function LLMGenerator() {
             <h2>Links</h2>
             <div className="flex gap-4">
               <Link
-                href="https://llmgenerator.com/?utm_source=johan-github-readme"
+                href="https://llmgenerator.com/?utm_source=johan-website-projects"
                 className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-bold"
                 rel="noopener noreferrer"
                 target="_blank"
