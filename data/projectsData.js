@@ -39,6 +39,18 @@ const projectsData = [
       'React 19, TypeScript, TanStack Router, Convex, Clerk, Stripe Webhooks, OpenAI, Anthropic, RAG, Resend, Recharts, ShadcnUI',
   },
   {
+    title: 'Vixtape',
+    description: `Interactive MVP demo for a content streaming platform designed to reduce decision fatigue. Built in Framer to showcase dual-screen TV/mobile experience with QR code attribution concept for creators.`,
+    imgSrc:
+      'https://res.cloudinary.com/dvcywi3uf/image/upload/v1706533764/jrguse/port/vixtape-poster.jpg',
+    href: '/projects/vixtape',
+    externalHref: '',
+    clientName: 'SWARM NYC',
+    clientURL: 'http://swarmnyc.com/',
+    date: 'August 2024',
+    skills: 'Framer, No-code, Interactive Prototyping, UX/UI Design, MVP Development',
+  },
+  {
     title: 'Hanko Hackathon',
     description: `Hanko is an open source project that allows you to create and share your own`,
     imgSrc:

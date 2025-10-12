@@ -9,10 +9,10 @@ const ContentSecurityPolicy = `
   style-src 'self' 'unsafe-inline' cdn.jsdelivr.net;
   script-src-elem 'self' 'unsafe-inline' giscus.app https://www.googletagmanager.com data:;
   img-src * blob: data:;
-  media-src 'none';
+  media-src https://res.cloudinary.com;
   connect-src *;
   font-src 'self' data: cdn.jsdelivr.net use.typekit.net;
-  frame-src giscus.app
+  frame-src giscus.app https://player.cloudinary.com;
 `
 
 const securityHeaders = [
