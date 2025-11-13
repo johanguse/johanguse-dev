@@ -1,5 +1,18 @@
 const projectsData = [
   {
+    title: 'Rural Dispatch - Ride Management MVP',
+    description: `Comprehensive ride-sharing management system with real-time SMS notifications, driver assignment, and role-based access control. Features two-way SMS conversations, automated status tracking, and fleet management for rural transportation services.`,
+    imgSrc:
+      'https://res.cloudinary.com/dvcywi3uf/image/upload/v1706533764/jrguse/port/ai-magic.jpg',
+    href: '/projects/rural-dispatch',
+    externalHref: '',
+    clientName: 'Personal Project',
+    clientURL: '',
+    date: 'January 2025',
+    skills:
+      'React 18, TypeScript, Vite, Tailwind CSS, shadcn/ui, Node.js, Express.js, MongoDB, Twilio, Vonage, React Hook Form, Zod',
+  },
+  {
     title: 'Bank Statement Converter',
     description: `AI-powered service that transforms PDF bank statements into Excel, CSV, JSON, and QBO formats with 99%+ accuracy. Built with Next.js 15 and FastAPI backend.`,
     imgSrc:
