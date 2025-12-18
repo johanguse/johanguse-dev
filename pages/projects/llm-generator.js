@@ -26,7 +26,7 @@ export default function LLMGenerator() {
             <div className="mb-8">
               <Image
                 alt="LLM Generator"
-                src="https://res.cloudinary.com/dvcywi3uf/image/upload/v1706533764/jrguse/port/ai-magic.jpg"
+                src="https://res.cloudinary.com/dvcywi3uf/image/upload/v1766067027/jrguse/port/llmgenerator-dashboard.jpg"
                 className="rounded-lg"
                 width={800}
                 height={400}

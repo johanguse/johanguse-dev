@@ -1,5 +1,18 @@
 const projectsData = [
   {
+    title: 'Rural Dispatch',
+    description: `Full-stack ride-sharing management application for rural communities. Features role-based access control, SMS notifications with Twilio/Vonage, real-time ride tracking, and TCPA-compliant messaging.`,
+    imgSrc:
+      'https://res.cloudinary.com/dvcywi3uf/image/upload/v1766063705/jrguse/port/rural-dispatch.jpg',
+    href: '/projects/rural-dispatch',
+    externalHref: 'https://github.com/johanguse/ride-request-mvp',
+    clientName: 'SWARM NYC',
+    clientURL: 'http://swarmnyc.com/',
+    date: 'December 2025 - Present',
+    skills:
+      'React 18, TypeScript, Vite, Fastify, Node.js, PostgreSQL, Prisma, Twilio, Vonage, Tailwind CSS, shadcn/ui, Zod',
+  },
+  {
     title: 'Bank Statement Converter',
     description: `AI-powered service that transforms PDF bank statements into Excel, CSV, JSON, and QBO formats with 99%+ accuracy. Built with Next.js 15 and FastAPI backend.`,
     imgSrc:

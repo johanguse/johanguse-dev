@@ -25,7 +25,7 @@ export default function BankStatementConverter() {
             <div className="mb-8">
               <Image
                 alt="Bank Statement Converter"
-                src="https://res.cloudinary.com/dvcywi3uf/image/upload/v1706533764/jrguse/port/ai-magic.jpg"
+                src="https://res.cloudinary.com/dvcywi3uf/image/upload/v1766065535/jrguse/port/bscwai-dashboard.jpg"
                 className="rounded-lg"
                 width={800}
                 height={400}
