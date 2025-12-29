@@ -1,6 +1,10 @@
-const fs = require('fs')
-const globby = require('globby')
-const prettier = require('prettier')
+import fs from 'fs'
+import { globby } from 'globby'
+import prettier from 'prettier'
+import { createRequire } from 'module'
+
+// Use createRequire to import CommonJS module from ESM
+const require = createRequire(import.meta.url)
 const siteMetadata = require('../data/siteMetadata')
 
 ;(async () => {
@@ -41,10 +45,11 @@ const siteMetadata = require('../data/siteMetadata')
         </urlset>
     `
 
-  const formatted = prettier.format(sitemap, {
+  const formatted = await prettier.format(sitemap, {
     ...prettierConfig,
     parser: 'html',
   })
 
+   
   fs.writeFileSync('public/sitemap.xml', formatted)
 })()
