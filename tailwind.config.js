@@ -2,9 +2,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  experimental: {
-    optimizeUniversalDefaults: true,
-  },
   content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js'],
   darkMode: 'class',
   theme: {
@@ -71,6 +68,12 @@ module.exports = {
             'code:after': {
               content: 'none',
             },
+            'pre code': {
+              color: 'inherit',
+              backgroundColor: 'transparent',
+              padding: '0',
+              borderRadius: '0',
+            },
             details: {
               backgroundColor: theme('colors.gray.100'),
               paddingLeft: '4px',
@@ -126,6 +129,10 @@ module.exports = {
             },
             code: {
               backgroundColor: theme('colors.gray.800'),
+            },
+            'pre code': {
+              color: 'inherit',
+              backgroundColor: 'transparent',
             },
             details: {
               backgroundColor: theme('colors.gray.800'),

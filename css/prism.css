@@ -1,8 +1,6 @@
 /**
- * CSS Styles for code highlighting.
- * Feel free to customize token styles 
- * by copying from a prismjs compatible theme:
- * https://github.com/PrismJS/prism-themes
+ * CSS Styles for code highlighting using sugar-high
+ * https://github.com/huozhi/sugar-high
  */
 
 /* Code title styles */
@@ -15,6 +13,66 @@
 }
 
 /* Code block styles */
+pre {
+  @apply overflow-x-auto rounded-lg p-4;
+  background: #0d1117;
+}
+
+pre code {
+  @apply text-sm leading-relaxed;
+  font-family:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+/**
+ * Sugar-high theme - GitHub Dark Dimmed inspired
+ * Token types: identifier, keyword, string, class, property, entity, jsxliterals, sign, comment
+ */
+
+/* Dark mode (default) */
+:root {
+  --sh-class: #f0883e; /* Orange - classes, types */
+  --sh-identifier: #c9d1d9; /* Light gray - variables, function names */
+  --sh-sign: #79c0ff; /* Light blue - operators, brackets */
+  --sh-property: #7ee787; /* Green - properties */
+  --sh-entity: #d2a8ff; /* Purple - entities, decorators */
+  --sh-jsxliterals: #a5d6ff; /* Cyan - JSX text */
+  --sh-string: #a5d6ff; /* Cyan - strings */
+  --sh-keyword: #ff7b72; /* Coral red - keywords (const, let, function) */
+  --sh-comment: #8b949e; /* Gray - comments */
+}
+
+/* Ensure dark mode uses same colors */
+.dark {
+  --sh-class: #f0883e;
+  --sh-identifier: #c9d1d9;
+  --sh-sign: #79c0ff;
+  --sh-property: #7ee787;
+  --sh-entity: #d2a8ff;
+  --sh-jsxliterals: #a5d6ff;
+  --sh-string: #a5d6ff;
+  --sh-keyword: #ff7b72;
+  --sh-comment: #8b949e;
+}
+
+/* Light mode - Adjusted for light backgrounds */
+html:not(.dark) pre {
+  background: #f6f8fa;
+}
+
+html:not(.dark) {
+  --sh-class: #953800; /* Dark orange */
+  --sh-identifier: #24292f; /* Dark gray */
+  --sh-sign: #0550ae; /* Blue */
+  --sh-property: #116329; /* Dark green */
+  --sh-entity: #8250df; /* Purple */
+  --sh-jsxliterals: #0a3069; /* Dark blue */
+  --sh-string: #0a3069; /* Dark blue */
+  --sh-keyword: #cf222e; /* Red */
+  --sh-comment: #6e7781; /* Gray */
+}
+
+/* Line highlighting */
 .code-highlight {
   @apply float-left min-w-full;
 }
@@ -40,100 +98,14 @@
   content: attr(line);
 }
 
-/* Token styles */
-/**
- * MIT License
- * Copyright (c) 2018 Sarah Drasner
- * Sarah Drasner's[@sdras] Night Owl
- * Ported by Sara vieria [@SaraVieira]
- * Added by Souvik Mandal [@SimpleIndian]
- */
-.token.comment,
-.token.prolog,
-.token.cdata {
-  color: rgb(99, 119, 119);
-  font-style: italic;
+/* Inline code styling */
+:not(pre) > code {
+  @apply rounded px-1.5 py-0.5 text-sm font-medium;
+  background: rgba(175, 184, 193, 0.2);
+  color: #e06c75;
 }
 
-.token.punctuation {
-  color: rgb(199, 146, 234);
-}
-
-.namespace {
-  color: rgb(178, 204, 214);
-}
-
-.token.deleted {
-  color: rgba(239, 83, 80, 0.56);
-  font-style: italic;
-}
-
-.token.symbol,
-.token.property {
-  color: rgb(128, 203, 196);
-}
-
-.token.tag,
-.token.operator,
-.token.keyword {
-  color: rgb(127, 219, 202);
-}
-
-.token.boolean {
-  color: rgb(255, 88, 116);
-}
-
-.token.number {
-  color: rgb(247, 140, 108);
-}
-
-.token.constant,
-.token.function,
-.token.builtin,
-.token.char {
-  color: rgb(130, 170, 255);
-}
-
-.token.selector,
-.token.doctype {
-  color: rgb(199, 146, 234);
-  font-style: italic;
-}
-
-.token.attr-name,
-.token.inserted {
-  color: rgb(173, 219, 103);
-  font-style: italic;
-}
-
-.token.string,
-.token.url,
-.token.entity,
-.language-css .token.string,
-.style .token.string {
-  color: rgb(173, 219, 103);
-}
-
-.token.class-name,
-.token.atrule,
-.token.attr-value {
-  color: rgb(255, 203, 139);
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-  color: rgb(214, 222, 235);
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-.token.table {
-  display: inline;
+.dark :not(pre) > code {
+  background: rgba(110, 118, 129, 0.4);
+  color: #f97583;
 }
