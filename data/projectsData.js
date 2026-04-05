@@ -5,7 +5,7 @@ const projectsData = [
     imgSrc:
       'https://res.cloudinary.com/dvcywi3uf/image/upload/v1766063705/jrguse/port/rural-dispatch.jpg',
     href: '/projects/rural-dispatch',
-    externalHref: 'https://github.com/johanguse/ride-request-mvp',
+    externalHref: 'https://github.com/swarmnyc/ruraldispatch-ride-request',
     clientName: 'SWARM NYC',
     clientURL: 'http://swarmnyc.com/',
     date: 'December 2025 - Present',
